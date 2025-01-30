@@ -9,4 +9,5 @@ use Filament\Resources\Pages\ViewRecord;
 class ViewRecipe extends ViewRecord
 {
     protected static string $resource = RecipeResource::class;
+    protected static string $view = 'recipes.view-recipe';
 }
