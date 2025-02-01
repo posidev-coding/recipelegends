@@ -192,7 +192,7 @@ class RecipeResource extends Resource
             ->columns([
                 TextColumn::make('id'),
                 TextColumn::make('title'),
-                SpatieMediaLibraryImageColumn::make('preview')
+                SpatieMediaLibraryImageColumn::make('preview')->conversion('preview')
             ])
             ->filters([
                 //

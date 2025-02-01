@@ -6,6 +6,7 @@ use Filament\Resources\Pages\Page;
 use Filament\Resources\Pages\Concerns\InteractsWithRecord;
 use Illuminate\Contracts\Support\Htmlable;
 use App\Filament\Resources\RecipeResource;
+use Filament\Support\Enums\MaxWidth;
 
 class ViewRecipe extends Page
 {
