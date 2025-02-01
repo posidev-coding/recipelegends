@@ -170,6 +170,14 @@ class RecipeResource extends Resource
                             )
                             ->minItems(1)
                     ])->columns(1)->columnSpan(2),
+                Section::make('Notes (optional)')
+                    ->description('Add any helpful tips about ingredient substitutions, serving, or storage here.')
+                    ->schema([
+                        Textarea::make('notes')
+                            ->placeholder('e.g. Pairs well with a cabernet sauvignon!')
+                            ->rows(3)
+                            ->columnSpan(2),
+                    ])->columns(2)->columnSpan(2),
                 Section::make('Media')
                     ->description('Add any documents you have related this recipe, such as a scan of the original handwritten version, a typed word document, a family photo, or a picture of the plated dish showing the final result. You can always add these later.')
                     ->schema([

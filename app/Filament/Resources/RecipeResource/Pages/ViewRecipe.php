@@ -44,4 +44,9 @@ class ViewRecipe extends Page
     {
         return $this->recipe->description;
     }
+
+    public function getMaxContentWidth(): MaxWidth
+    {
+        return MaxWidth::ThreeExtraLarge;
+    }
 }
