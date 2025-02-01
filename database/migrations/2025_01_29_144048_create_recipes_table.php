@@ -22,7 +22,7 @@ return new class extends Migration
             $table->smallInteger('cook_time')->unsigned()->nullable();
             $table->json('ingredients')->nullable();
             $table->json('directions')->nullable();
-            $table->json('notes')->nullable();
+            $table->text('notes')->nullable();
             $table->timestamps();
 
             $table->index('user_id');
