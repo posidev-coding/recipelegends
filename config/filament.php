@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'default_filesystem_disk' => 'sftp',
+    'default_filesystem_disk' => 's3',
 
     /*
     |--------------------------------------------------------------------------
