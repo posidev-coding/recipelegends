@@ -1,5 +1,16 @@
 <x-filament-panels::page>
-    Viewing recipe...
+
+    {{-- <div class="flex text-2xl font-semibold tracking-widest">
+        {{ $recipe->title }}
+    </div> --}}
+
+    <div>
+        @if ($preview)
+            <img src="{{ $preview }}" />
+        @else
+            No Image
+        @endif
+    </div>
     {{-- @if ($this->hasInfolist())
         {{ $this->infolist }}
     @else

@@ -174,8 +174,10 @@ class RecipeResource extends Resource
                     ->description('Add any documents you have related this recipe, such as a scan of the original handwritten version, a typed word document, a family photo, or a picture of the plated dish showing the final result. You can always add these later.')
                     ->schema([
                         SpatieMediaLibraryFileUpload::make('media')
-                            ->disk('media')
+                            ->disk('s3')
                             ->multiple()
+                            ->visibility('public')
+                            ->conversion('preview')
                             ->panelLayout('grid')
                             ->reorderable()
                             ->columnSpan(2),
@@ -190,9 +192,7 @@ class RecipeResource extends Resource
             ->columns([
                 TextColumn::make('id'),
                 TextColumn::make('title'),
-                TextColumn::make('description'),
                 SpatieMediaLibraryImageColumn::make('preview')
-                    ->conversion('preview')
             ])
             ->filters([
                 //
